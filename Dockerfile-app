@@ -1,7 +1,4 @@
 ARG REGISTRY_NAME
-FROM ${REGISTRY_NAME}/baseimages/node:15-alpine
+FROM ${REGISTRY_NAME}/baseimages/pol-apps-base
 
-COPY . /src
-RUN cd /src && npm install
-EXPOSE 80
-CMD ["node", "/src/server.js"]
+RUN echo "hello acr task!"
